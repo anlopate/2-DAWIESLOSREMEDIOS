@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <script>  
+
+    function inserta (id){     
+        var arti = {};
+        arti.cod=id; // Recupera código.
+        arti.nombre=prompt("Nombre del artículo");
+        arti.cantidad=Number(prompt("Cantidad"));
+        arti.precio=Number(prompt("Precio"));    
+        return arti;
+    }
+
+    function verCesta (arts) {    
+        var cad="Cod  Nombre  Cantidad  Precio  Subtotal\n";
+        var total=0;
+        for(var i of arts) {
+            for (var prop in i) {
+                cad += i[prop]+"          ";
+            }
+            cad+= (i.precio*i.cantidad).toFixed(2) +"\n";
+            total += i.precio*i.cantidad;
+        }
+        cad += "                                        Total = "+total.toFixed(2)+" €";
+        alert (cad);
+    }
+
+    function borraArti (arts) {
+        var codArti = Number(prompt("Código del artículo ? "));  
+        var index= arts.findIndex (art=>art.cod == codArti); //Devuelve el índice del código indicado. 
+        if (index!=-1) {
+            arts.splice(index,1);
+        }else{
+            alert("No existe el código indicado ...")
+        }       
+    }
+
+    function vaciarCesta (arts) {
+        arts.length=0;
+    }
+
+    function menu ( ) {
+        var id = 0; //Guarda ID artículos
+        var art = []; //Guarda artículos 
+        var op1=`        1.Ver cesta
+        2. Insertar artículo
+        3. Borrar artículo
+        4. Vaciar cesta
+        5. Salir`
+
+        while(true) {
+            opc=Number(prompt(op1));
+            switch(opc) { 
+                case 1:
+                    verCesta(art);
+                    break;
+                case 2:
+                    id++;
+                    art.push(inserta (id));
+                    break;
+                case 3:
+                    borraArti (art);
+                    break;
+                case 4:
+                    vaciarCesta (art);
+                    break;
+                case 5:
+                    return; // Sale de función menú.
+                default:
+                return; // Sale de función menú si no hay coincidencias. 
+                
+            }
+            
+        } 
+      
+    }
+
+    menu ();
+    </script>
+</head>
+<body>
+</body>
+</html>
