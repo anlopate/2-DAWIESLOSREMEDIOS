@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Crea una web que solicite tres números y si dichos números son todos
+    menores a 100 y mayores que 10, muestre un mensaje de “Ok”, en caso
+    contrario que muestre “No cumple” -->
+
+    <script>
+        var num1 = parseInt(prompt("Introduce un número."));
+        var num2 = parseInt(prompt("Introduce otro número."));
+        var num3 = parseInt(prompt("Introduce el último número."));
+        var mensaje="";
+        var cont=0;
+
+        if(num1 < 100 && num1 > 10){
+            cont++;
+        }
+
+        if(num2 < 100 && num2 >10){
+            cont++;
+        }
+
+        if(num3 <100 && num3 >10){
+            cont++;
+        }
+
+        if(cont == 3){
+            mensaje="OK";
+        }else{
+            mensaje="No cumple";
+        }
+
+        
+
+            alert(mensaje);
+        
+
+    </script>
+</body>
+</html>

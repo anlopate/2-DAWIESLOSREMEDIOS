@@ -14,8 +14,6 @@ class Producto {
         this.#subtotal=precio*unidades;
         }
 
-    constructor(){
-
-    }    
+   
 
 }

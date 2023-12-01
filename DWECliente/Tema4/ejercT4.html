@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function volumenCubo(lado){
+            return lado**3;
+
+        }
+        function areaCubo(lado){
+            return 6 * lado**2;
+        }
+
+        function volumenEsfera(radio){
+            return 4/3*Math.PI*radio**3;
+        }
+
+        function areaEsfera(radio){
+            return 4*Math.PI*radio**2;
+        }
+
+        function volumenCilindro(radio,altura){
+            return Math.PI*radio**2*altura;
+
+        }
+
+        function areaCilindro(radio,altura){
+            return 2*Math.PI*radio**2 + 2*Math.PI*radio*altura;
+        }
+        
+        
+        var eleccion="";
+        var lado = "";
+        var radio = "";
+        var altura = "";
+        
+        var opcion = prompt("Elige una opción:\n1. Elija entre cubo, esfera o cilindro.\n2. Introduzca los valores de las variables.\n3. Cálculo de volumen.\n4. Cálculo de área.\n5. Finalizar.");
+       
+        while (opcion != 0){
+
+            if(opcion == "1"){
+                eleccion = prompt("Elegir entre:\n1.Cubo.\n2.Esfera.\n3.Cilindro.");
+
+            }if(opcion == "2"){
+                lado = parseInt(prompt("Si la figura tiene lado, ¿Cuál es el lado de la figura?"))
+                radio = parseInt(prompt("Si la figura tiene radio, ¿Cuál es el radio de la figura?"));
+                altura = parseInt(prompt("Si la figura tiene altura, ¿Cuál es su altura?"));
+
+            }if(opcion == "3"){
+                if(eleccion == "1"){
+                       alert("El volumen de la figura es : " + volumenCubo(lado));
+                    }else if(eleccion == "2"){
+                        alert("El volumen de la figura es : " + volumenEsfera(radio));
+                    }else if(eleccion =="3"){
+                        alert("El volumen de la figura es : " + volumenCilindro(radio,altura));
+                    }else{
+                        alert("El volumen de la figura es : " + volumenCilindro(radio,altura));
+                    }  
+            }if(opcion == "4"){
+                if(eleccion == "1"){
+                    alert("El área del cubo es: " + areaCubo(lado));
+                }else if(eleccion  == "2"){
+                    alert("El área de la esfera es: " + areaEsfera(radio,altura));
+                }else if(eleccion == "3"){
+                    alert("El área del cilindro es: " + areaCilindro(radio,altura));
+                }else{
+                    alert("Esa opción no está disponible");
+                } 
+                
+            }if(opcion == "5"){
+
+            }
+            opcion = prompt("Elige una opción:\n1. Elija entre cubo, esfera o cilindro.\n2. Introduzca los valores de las variables.\n3. Cálculo de volumen.\n4. Cálculo de área.\n5. Finalizar");
+        }
+
+    </script>
+</body>
+</html>

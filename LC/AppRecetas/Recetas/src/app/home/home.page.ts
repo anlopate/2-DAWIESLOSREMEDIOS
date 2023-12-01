@@ -12,7 +12,7 @@ export class HomePage {
   recetaEdit = {} as Receta;
   idRecetaSelect: string ="";
   arrayColeccionRecetas: any = [{
-    id: 0,
+    id: "",
     nombre: {} as Receta,
     numeroComensales: 0,
     tiempoEstimado: 0,
@@ -63,4 +63,14 @@ export class HomePage {
     
   }
 
-}
+  clicBotonModificar(){
+    this.firestoreService.modificar("recetas", this.idRecetaSelect, this.recetaEdit).then(()=>{
+      console.log('Receta modificada correctamente');
+    }, (error) => {
+      console.error(error);
+    });
+    
+  }
+  }
+
+

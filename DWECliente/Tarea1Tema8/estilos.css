@@ -1,0 +1,44 @@
+header{
+    background-color: #afedc0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+header h1{
+    padding-bottom: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#187a11;
+    
+}
+.logo{
+    margin-right: 800px;;
+}
+img{
+    width: 100px;
+    height: 100px;
+    
+}
+.productos{
+    width: 500px;
+}
+
+.fyv{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+    margin-top: 30px;
+    align-content: center;
+    border-style: solid;
+    width: 500px;
+    
+}
+
+.tablaCesta{
+    display: flex;
+    flex-direction: flex-end;
+    border-style: solid;
+    width: 500px;
+    margin-left: 800px;
+    margin-bottom: 300px;
+}

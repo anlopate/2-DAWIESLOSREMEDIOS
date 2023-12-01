@@ -1,11 +1,10 @@
 class Cesta {
 
-    #linea;
-    #producto;
+   
+    #productosComprados = [];//de los objetos solo contenga el id y la cantidad;
 
     constructor(){
-       this.#linea;
-       this.#producto= new Producto();
+       
     }
 
 

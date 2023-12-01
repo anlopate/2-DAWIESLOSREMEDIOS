@@ -14,23 +14,25 @@
   </ion-header>
 
   <ion-label>Título</ion-label>
-  <ion-input [(ngModel)]="recetaEdit.titulo"></ion-input>
+  <ion-input [(ngModel)]="recetaEdit.nombre"></ion-input>
 
   <ion-label>Descripción</ion-label>
-  <ion-input [(ngModel)]="recetaEdit.descripcion"></ion-input>
+  <ion-input [(ngModel)]="recetaEdit.elaboracion"></ion-input>
 
   <ion-button (click)="clicBotonInsertar()">Añadir receta</ion-button>
   <ion-button (click)="clicBotonBorrar()">Borrar receta</ion-button>
+  <ion-button (click)="clicBotonModificar()">Modificar receta</ion-button>
+
 
   <h1>LISTA DE RECETAS</h1>
   <ion-list>
-    <ion-item *ngFor="let documentTarea of arrayColeccionTareas" (click)="selecReceta(documentReceta.id, documentReceta.receta)">
+    <ion-item *ngFor="let documentReceta of arrayColeccionRecetas" (click)="selecReceta(documentReceta.id, documentReceta.receta)">
       <ion-grid>
         <ion-row>
-          <h2>{{ documentReceta.receta.titulo }}</h2>
+          <h2>{{ documentReceta.receta.nombre }}</h2>
         </ion-row>
         <ion-row>
-          <p>{{ documentReceta.receta.descripcion }}</p>
+          <p>{{ documentReceta.receta.elaboracion }}</p>
         </ion-row>
       </ion-grid>
     </ion-item>

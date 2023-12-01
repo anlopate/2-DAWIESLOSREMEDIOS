@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--7. Crea una web que reciba un número y calcule el factorial de ese número.
+            NOTA 1: Probar con números pequeños (menores a 50), el factorial crece
+            muy rápido.
+            NOTA 2: El factorial de un número es ese número multiplicado por el factorial
+            del número anterior. El factorial de cero es 1. No existe el factorial de
+            números negativos.-->
+
+        <script>
+            var numero = parseInt(prompt("Introduce un número"));
+            var factorial = 1;
+            for(let i=numero-1; i>0; i--){
+                factorial += factorial*i;
+            }
+            alert(factorial);
+        </script>
+
+</body>
+</html>

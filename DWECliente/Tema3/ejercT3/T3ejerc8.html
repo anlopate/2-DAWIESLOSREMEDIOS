@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--8. Crea una web que calcule la descomposición en factores primos de un
+         número solicitado al inicio. Es decir: de 18 responderá (2 * 3 * 3 ).
+    -->
+
+    <script>
+        var numero = parseInt(prompt("Introduce un número"));
+        var factPrimo = [];
+        for(var i=2; i<=numero; i++){
+            if(numero%i==0){
+                factPrimo.push(i);
+            }
+        }
+        alert("Los factores primos de 18 son : " + factPrimo.join(','));
+    </script>
+
+</body>
+</html>
