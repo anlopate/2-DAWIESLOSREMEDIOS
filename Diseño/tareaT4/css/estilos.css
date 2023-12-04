@@ -1,0 +1,119 @@
+.cabecera {
+  background-color: #000000;
+}
+.cabecera .titulo1 {
+  line-height: 1px;
+  padding-left: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+}
+.cabecera .titulo2 {
+  color: #ffffff;
+  padding-left: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 10px;
+}
+
+.navegador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-radius: 1px;
+  border-bottom-color: #eeeeee;
+}
+.navegador a {
+  text-decoration-line: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #000000;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+
+.centro {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.autor span {
+  color: #cc0000;
+}
+
+.bloque1 {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-color: #eeeeee;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: large;
+}
+.bloque1 p {
+  text-align: justify;
+  line-height: 25px;
+}
+
+.pinocho img {
+  width: 700px;
+  height: 500px;
+  padding-left: 200px;
+  padding-top: 30px;
+}
+
+.pinocho p {
+  padding-left: 450px;
+  font-size: smaller;
+}
+.pinocho p span {
+  color: #cc0000;
+}
+
+p {
+  text-align: justify;
+}
+
+.video {
+  width: 700px;
+  height: 500px;
+  padding-left: 200px;
+  padding-top: 30px;
+}
+
+.autor-foto {
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+  justify-content: center;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+.autor-foto img {
+  border-radius: 50%;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.autor-foto p {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-top: 40px;
+  padding-left: 15px;
+}
+.autor-foto .pie-foto {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding-top: 2px;
+  font-style: italic;
+  font-size: smaller;
+}
+.autor-foto .pie-foto span {
+  color: #cc0000;
+}
+
+/*# sourceMappingURL=estilos.css.map */
